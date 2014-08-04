@@ -108,8 +108,14 @@ describe PostsController do
 
       it 'destroys post record' do
         expect {delete :destroy, {:id => @post.id}}
-        .to change(post, :count)
+        .to change(Post, :count)
         .by(-1)
+      end
+
+      it 'deletes successfully' do
+        actual = response.code
+        expected = '200'
+        expect(actual).to eq(expected)
       end
 
     end # DELETE destroy
@@ -137,7 +143,8 @@ describe PostsController do
   describe 'POST create' do
 
     before :each do
-      post :create, {:post => {message: 'How is the weather in the Bay Area today?'}}
+      @user = User.create({name: 'Dmitry'})
+      post :create, {:post => {message: 'How is the weather in the Bay Area today?', user_id: @user.id}}
     end
 
     it 'responds with a redirect' do
@@ -147,13 +154,19 @@ describe PostsController do
     end
 
     it 'inserts a post record' do
-      actual = post.last.message
+      actual = Post.last.message
       expected = 'How is the weather in the Bay Area today?'
       expect(actual).to eq(expected)
     end
 
+    it 'associates post with a user' do
+      actual = Post.last.user_id
+      expected = @user.id
+      expect(actual).to eq(expected)
+    end
+
     it 'redirects to show' do
-      response.should redirect_to post_path(post.last)
+      response.should redirect_to post_path(Post.last)
     end
 
   end # POST create
