@@ -1,9 +1,19 @@
-<div class="signin">
+<%= render 'shared/errors' %>
+
+<!-- <div class="signin">
   <%= form_tag sessions_path, class: "form_helper" do %>
-    <%= label_tag :username %>
+    <%= label_tag :name %>
     <%= text_field_tag :username %>
     <%= label_tag :password %>
     <%= password_field_tag :password %>
     <%= button_tag :Submit %>
   <% end %>
-</div>
+</div> -->
+
+<%= form_for @user, url: {action: "create"}, html: {class: "new_user_form"} do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, :placeholder => "What is your name?" %>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <%= f.submit "Log In" %>
+<% end %>
