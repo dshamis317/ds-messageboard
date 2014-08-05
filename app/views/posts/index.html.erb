@@ -1,3 +1,12 @@
 <% if current_user %>
   <%= button_to "New Post", new_post_path, :class => "new_post_button", :method => :get %>
 <% end %>
+
+<ul class="posts_list">
+  <% @posts.each do |post| %>
+  <li class="post">
+    <h3 class="post_title"><%= post.title %></h3>
+    <p class="post_text"><%= post.message %></p>
+  </li>
+  <% end %>
+</ul>
