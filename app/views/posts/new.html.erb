@@ -1,0 +1,7 @@
+<%= form_for [current_user, @post], url: {action: "create"}, html: {class: "new_post_form"} do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, :placeholder => "What is the title?" %>
+  <%= f.label :post %>
+  <%= f.text_field :message, :placeholder => "What is your post?" %>
+  <%= f.submit "Post" %>
+<% end %>
