@@ -2,6 +2,8 @@
   <div class="posts_title_bar">
     <% if current_user %>
       <%= button_to '☑ New Post', new_post_path, :class => "new_post_button", :method => :get %>
+      <% else %>
+      <%= button_to 'Log In', login_path, :class => "new_post_button", :method => :get %>
     <% end %>
   </div>
   <div class="posts">
@@ -19,11 +21,13 @@
           <% end %>
         <% end %>
       </p>
-      <% if post.user_id == current_user.id %>
-        <ul class="buttons">
-          <li><%= button_to "Edit", edit_post_path(post), :class => "edit_post_button", :method => :get %></li>
-          <li><%= button_to "X", post_path(post), :class => "i", :method => :delete %></li>
-        </ul>
+      <% if current_user %>
+        <% if post.user_id == current_user.id %>
+          <ul class="buttons">
+            <li><%= button_to "Edit", edit_post_path(post), :class => "edit_post_button", :method => :get %></li>
+            <li><%= button_to "X", post_path(post), :class => "i", :method => :delete %></li>
+          </ul>
+        <% end %>
       <% end %>
     </li>
     <% end %>

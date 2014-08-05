@@ -4,7 +4,7 @@
 
 body {
   width: 90%;
-  background: url(/assets/squared_metal.png);
+  background-color: lightslategray;
 }
 .posts_list {
   margin: 0 auto;
@@ -12,22 +12,26 @@ body {
   list-style-type: none;
 
   .posts_title_bar {
-    background-color: gray;
+    background-color: dimgray;
     border-radius: 10px;
     border: 1px solid black;
     padding: 3px;
 
     .new_post_button {
-      background-color: lightgray;
+      background-color: gray;
       margin: 5px;
       border-radius: 5px;
       color: white;
+      font-family: arial;
+      font-size: 12px;
+      border: 1px solid black;
     }
 
     .new_post_button:hover {
       background-color: black;
       color: white;
       cursor: pointer;
+      border: 1px solid white;
     }
   }
 
@@ -41,16 +45,18 @@ body {
       border: 1px solid black;
       border-radius: 10px;
       margin: 3px 0 3px 0;
+      font-family: arial;
 
       .text {
-        margin: 0 0 0 20px;
+        margin: 3px 0 3px 20px;
       }
 
       .post_title {
-        width: 70%;
+        width: 80%;
         overflow: hidden;
         text-decoration: underline;
         cursor: pointer;
+        font-size: 18px;
       }
 
       .post_message {
@@ -60,6 +66,7 @@ body {
       .post_date {
         width: 70%;
         float: left;
+        font-size: 12px;
       }
 
       .buttons {
@@ -70,6 +77,16 @@ body {
 
         li {
           display: inline-block;
+
+          input {
+            background-color: transparent;
+          }
+
+          input:hover {
+            background-color: red;
+            color: white;
+            cursor: pointer;
+          }
         }
       }
     }
