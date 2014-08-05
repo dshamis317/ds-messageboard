@@ -5,10 +5,17 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script type="text/javascript">
+  <% if current_user %>
+    window.currentUser = {
+      id : "<%=current_user.id%>"
+    }
+  <% end %>
+  </script>
 </head>
 <body>
-<%= render 'shared/nav' %>
-<%= yield %>
+  <%= render 'shared/nav' %>
+  <%= yield %>
 
 </body>
 </html>
