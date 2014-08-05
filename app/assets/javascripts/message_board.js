@@ -1,13 +1,9 @@
-window.MessageBoard = {
+var MessageBoard = MessageBoard || {
   Models: {},
   Collections: {},
-  Views: {},
-  Routers: {},
-  initialize: function() {
-    alert('Hello from Backbone!');
-  }
+  Views: {}
 };
 
 $(document).ready(function(){
-  MessageBoard.initialize();
+
 });
