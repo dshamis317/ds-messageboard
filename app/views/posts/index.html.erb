@@ -7,9 +7,11 @@
   <div class="posts">
     <% @posts.each do |post| %>
     <li class="post">
-      <h3 class="post_title"><%= post.title %></h3>
-      <p class="post_text"><%= post.message %></p>
-      <p class="date">
+      <h3 class="post_title text"><%= post.title %></h3>
+      <div class="post_message text">
+        <p><%= post.message %></p>
+      </div>
+      <p class="post_date text">
         Posted <%= post.created_at.in_time_zone('Eastern Time (US & Canada)').strftime('%B %e, %Y @ %l:%M %p') %> by
         <% @users.each do |user| %>
           <% if user.id == post.user_id %>
@@ -18,8 +20,10 @@
         <% end %>
       </p>
       <% if post.user_id == current_user.id %>
-        <%= button_to "Edit", edit_post_path(post), :class => "edit_post_button", :method => :get %>
-        <%= button_to "X", post_path(post), :class => "i", :method => :delete %>
+        <ul class="buttons">
+          <li><%= button_to "Edit", edit_post_path(post), :class => "edit_post_button", :method => :get %></li>
+          <li><%= button_to "X", post_path(post), :class => "i", :method => :delete %></li>
+        </ul>
       <% end %>
     </li>
     <% end %>

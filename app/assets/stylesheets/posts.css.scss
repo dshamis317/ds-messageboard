@@ -13,8 +13,9 @@ body {
 
   .posts_title_bar {
     background-color: gray;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
     border: 1px solid black;
+    padding: 3px;
 
     .new_post_button {
       background-color: lightgray;
@@ -31,6 +32,46 @@ body {
   }
 
   .posts {
-    width: 100%;
+
+    .post {
+      width: 100%;
+      height: auto;
+      display: inline-block;
+      background-color: lightgray;
+      border: 1px solid black;
+      border-radius: 10px;
+      margin: 3px 0 3px 0;
+
+      .text {
+        margin: 0 0 0 20px;
+      }
+
+      .post_title {
+        width: 70%;
+        overflow: hidden;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      .post_message {
+        display: none;
+      }
+
+      .post_date {
+        width: 70%;
+        float: left;
+      }
+
+      .buttons {
+        list-style-type: none;
+        float: right;
+        margin-right: 10px;
+        margin-top: -15px;
+
+        li {
+          display: inline-block;
+        }
+      }
+    }
   }
 }
