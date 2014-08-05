@@ -5,7 +5,7 @@ describe User do
   describe "#introduction" do
 
     it "introduces itself" do
-      user = User.create({name: "Dmitry"})
+      user = User.create({name: "Dmitry", password: 'password'})
       post = Post.new({message: 'This is a test post.'})
       user.posts << post
       actual = user.introduction
