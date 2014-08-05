@@ -1,0 +1,12 @@
+<nav class="nav_bar">
+  <h1><a class="home" href="<%= root_path %>">ViralHeat Message Board</a></h1>
+  <% if current_user %>
+  <ul>
+    <h4>Welcome <%= current_user.name %></h4>
+    <li><%= link_to "Log Out", logout_path, method: :delete %></li>
+    <% else %>
+    <li class="right"><%= link_to "Log In", login_path %></li>
+    <li class="right"><%= link_to "Sign-Up", signup_path %></li>
+  </ul>
+  <% end %>
+</nav>
