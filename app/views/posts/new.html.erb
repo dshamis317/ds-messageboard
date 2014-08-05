@@ -3,5 +3,6 @@
   <%= f.text_field :title, :placeholder => "What is the title?" %>
   <%= f.label :post %>
   <%= f.text_field :message, :placeholder => "What is your post?" %>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
   <%= f.submit "Post" %>
 <% end %>

@@ -7,6 +7,10 @@
   <li class="post">
     <h3 class="post_title"><%= post.title %></h3>
     <p class="post_text"><%= post.message %></p>
+    <% if post.user_id == current_user.id %>
+      <%= button_to "Edit", edit_post_path(post), :class => "edit_post_button", :method => :get %>
+      <%= button_to "Delete", post_path(post), :class => "delete_post_button", :method => :delete %>
+    <% end %>
   </li>
   <% end %>
 </ul>
