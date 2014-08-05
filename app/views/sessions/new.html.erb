@@ -1,0 +1,9 @@
+<div class="signin">
+  <%= form_tag sessions_path, class: "form_helper" do %>
+    <%= label_tag :username %>
+    <%= text_field_tag :username %>
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+    <%= button_tag :Submit %>
+  <% end %>
+</div>
