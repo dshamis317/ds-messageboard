@@ -1,5 +1,5 @@
 <% if current_user %>
-  <%= button_to "New Post", new_post_path, :class => "new_post_button", :method => :get %>
+<%= button_to "New Post", new_post_path, :class => "new_post_button", :method => :get %>
 <% end %>
 
 <ul class="posts_list">
@@ -7,6 +7,14 @@
   <li class="post">
     <h3 class="post_title"><%= post.title %></h3>
     <p class="post_text"><%= post.message %></p>
+    <p class="date">
+      Posted <%= post.created_at.in_time_zone('Eastern Time (US & Canada)').strftime('%B %e, %Y @ %l:%M %p') %> by
+      <% @users.each do |user| %>
+        <% if user.id == post.user_id %>
+          <%= user.name %>
+        <% end %>
+      <% end %>
+    </p>
     <% if post.user_id == current_user.id %>
       <%= button_to "Edit", edit_post_path(post), :class => "edit_post_button", :method => :get %>
       <%= button_to "Delete", post_path(post), :class => "delete_post_button", :method => :delete %>
