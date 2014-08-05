@@ -1,0 +1,23 @@
+.nav_bar {
+  width: 100%;
+  font-family: arial;
+  display: inline-block;
+
+  h1 {
+    width: 300px;
+    float: left;
+  }
+
+  ul {
+    margin-left: 1000px;
+    list-style-type: none;
+
+    h4 {
+      margin: 0;
+    }
+
+    .right {
+      margin-left: 130px;
+    }
+  }
+}
