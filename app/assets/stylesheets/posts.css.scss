@@ -3,5 +3,34 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
+  width: 90%;
   background: url(/assets/squared_metal.png);
+}
+.posts_list {
+  margin: 0 auto;
+  width: 100%;
+  list-style-type: none;
+
+  .posts_title_bar {
+    background-color: gray;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid black;
+
+    .new_post_button {
+      background-color: lightgray;
+      margin: 5px;
+      border-radius: 5px;
+      color: white;
+    }
+
+    .new_post_button:hover {
+      background-color: black;
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  .posts {
+    width: 100%;
+  }
 }
