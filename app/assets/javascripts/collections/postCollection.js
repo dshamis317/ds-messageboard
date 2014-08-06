@@ -7,5 +7,9 @@ var MessageBoard = MessageBoard || {
 MessageBoard.Collections.PostCollection = Backbone.Collection.extend({
 
   model: MessageBoard.Models.Post,
-  url: '/posts'
+  url: '/posts',
+  parse: function(data) {
+    var posts = data.posts;
+    return posts;
+      }
 });

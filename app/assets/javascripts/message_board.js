@@ -4,9 +4,6 @@ var MessageBoard = MessageBoard || {
   Views: {}
 };
 
-var postCollection;
-var postListView;
-
 MessageBoard.initialize = function() {
   var postCollection = new MessageBoard.Collections.PostCollection();
   var postListView = new MessageBoard.Views.PostListView({
