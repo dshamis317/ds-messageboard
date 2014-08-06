@@ -15,7 +15,7 @@ body {
   margin: 5px;
   border-radius: 5px;
   color: white;
-  font-family: arial;
+  font-family: 'Lato', sans-serif;;
   font-size: 12px;
   border: 1px solid black;
 }
@@ -29,7 +29,7 @@ body {
 
 .posts_list {
   margin-top: 80px;
-  width: 90%;
+  width: 95%;
   list-style-type: none;
 
   .posts_title_bar {
@@ -45,7 +45,7 @@ body {
     background-color: lightgray;
     border-radius: 10px;
     border: 1px solid black;
-    font-family: arial;
+    font-family: 'Lato', sans-serif;;
     display: inline-block;
     padding-bottom: 5px;
 
@@ -98,7 +98,7 @@ body {
       border: 1px solid black;
       border-radius: 10px;
       margin: 3px 0 3px 0;
-      font-family: arial;
+      font-family: 'Lato', sans-serif;;
 
       .post_title {
         width: 80%;
@@ -149,15 +149,16 @@ body {
 
 .new_user_form {
   width: 300px;
-  height: 200px;
+  height: 230px;
   background-color: lightgray;
   margin: 0 auto;
   margin-top: 80px;
-  font-family: arial;
+  font-family: 'Lato', sans-serif;;
   border: 1px solid black;
 
   h2 {
     width: 100%;
+    font-family: 'Permanent Marker', cursive;
     background-color: dimgray;
     padding: 5px 0 5px 0;
     text-align: center;
@@ -175,7 +176,7 @@ body {
   }
 
   #user_name {
-    margin-left: 38px;
+    margin-left: 40px;
   }
 
   .button_new {

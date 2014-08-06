@@ -1,5 +1,6 @@
 .nav_bar {
   width: 100%;
+  height: 60px;
   font-family: arial;
   display: inline-block;
   background-color: dimgray;
@@ -12,6 +13,7 @@
     width: 500px;
     float: left;
     margin-left: 50px;
+    font-family: 'Permanent Marker', cursive;
   }
 
   ul {
