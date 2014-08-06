@@ -1,0 +1,238 @@
+/* line 5, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+body {
+  background: url("/assets/squared_metal.png");
+}
+
+/* line 9, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+.text {
+  margin: 3px 0 3px 20px;
+}
+
+/* line 13, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+.main {
+  background-color: gray;
+  margin: 5px;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  border: 1px solid black;
+}
+
+/* line 23, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+.main:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+/* line 30, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+.posts_list {
+  margin-top: 80px;
+  width: 95%;
+  list-style-type: none;
+}
+/* line 35, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+.posts_list .posts_title_bar {
+  background-color: dimgray;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 3px;
+}
+/* line 42, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+.posts_list .form {
+  margin-top: 3px;
+  width: 100%;
+  background-color: lightgray;
+  border-radius: 10px;
+  border: 1px solid black;
+  font-family: 'Lato', sans-serif;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+/* line 52, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+.posts_list .form hr {
+  width: 95%;
+  border-top: 1px dotted gray;
+}
+/* line 57, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+.posts_list .form label {
+  font-size: 10px;
+}
+/* line 61, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+.posts_list .form .post_title_div {
+  width: 45%;
+  float: left;
+}
+/* line 65, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+.posts_list .form .post_title_div .form_title {
+  width: 75%;
+}
+/* line 70, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+.posts_list .form .post_message_div {
+  width: 50%;
+  float: left;
+}
+/* line 74, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+.posts_list .form .post_message_div .form_message {
+  width: 100%;
+  height: 60px;
+}
+/* line 79, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+.posts_list .form button {
+  background-color: lightgoldenrodyellow;
+  float: right;
+  margin-right: 35px;
+  width: 100px;
+  border-radius: 5px;
+  border-style: none;
+  cursor: pointer;
+}
+/* line 93, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+.posts_list .posts .post {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  background-color: lightgray;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 3px 0 3px 0;
+  font-family: 'Lato', sans-serif;
+}
+/* line 103, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+.posts_list .posts .post .post_title {
+  width: 80%;
+  overflow: hidden;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 18px;
+}
+/* line 111, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+.posts_list .posts .post .post_message {
+  display: none;
+}
+/* line 115, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+.posts_list .posts .post .post_date {
+  width: 70%;
+  float: left;
+  font-size: 12px;
+}
+/* line 121, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+.posts_list .posts .post .buttons {
+  list-style-type: none;
+  float: right;
+  margin-right: 10px;
+  margin-top: -15px;
+}
+/* line 127, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+.posts_list .posts .post .buttons li {
+  display: inline-block;
+}
+/* line 130, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+.posts_list .posts .post .buttons li input, .posts_list .posts .post .buttons li button {
+  background-color: transparent;
+}
+/* line 134, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+.posts_list .posts .post .buttons li input:hover, .posts_list .posts .post .buttons li button:hover {
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+
+/* line 145, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+.edit_message {
+  width: 85%;
+  max-width: 85%;
+}
+
+/* line 150, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+.new_user_form {
+  width: 300px;
+  height: 230px;
+  background-color: lightgray;
+  margin: 0 auto;
+  margin-top: 80px;
+  font-family: 'Lato', sans-serif;
+  border: 1px solid black;
+}
+/* line 159, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+.new_user_form h2 {
+  width: 100%;
+  font-family: 'Permanent Marker', cursive;
+  background-color: dimgray;
+  padding: 5px 0 5px 0;
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+/* line 168, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+.new_user_form .form_label {
+  text-align: left;
+  margin: 20px;
+}
+/* line 173, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+.new_user_form input {
+  position: relative;
+  margin-left: 10px;
+}
+/* line 178, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+.new_user_form #user_name {
+  margin-left: 40px;
+}
+/* line 182, /Users/Dima/code/projects/message_board/app/assets/stylesheets/posts.css.scss */
+.new_user_form .button_new {
+  text-align: center;
+  margin-top: 10px;
+}
+/* line 1, /Users/Dima/code/projects/message_board/app/assets/stylesheets/shared.css.scss */
+.nav_bar {
+  width: 100%;
+  height: 60px;
+  font-family: arial;
+  display: inline-block;
+  background-color: dimgray;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-bottom: 1px solid black;
+}
+/* line 12, /Users/Dima/code/projects/message_board/app/assets/stylesheets/shared.css.scss */
+.nav_bar h1 {
+  width: 500px;
+  float: left;
+  margin-left: 50px;
+  font-family: 'Permanent Marker', cursive;
+}
+/* line 19, /Users/Dima/code/projects/message_board/app/assets/stylesheets/shared.css.scss */
+.nav_bar ul {
+  margin-left: 950px;
+  margin-top: 20px;
+  list-style-type: none;
+}
+/* line 24, /Users/Dima/code/projects/message_board/app/assets/stylesheets/shared.css.scss */
+.nav_bar ul h4 {
+  margin: 0;
+}
+/* line 28, /Users/Dima/code/projects/message_board/app/assets/stylesheets/shared.css.scss */
+.nav_bar ul .right {
+  margin-left: 100px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
