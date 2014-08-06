@@ -1,14 +1,14 @@
-<h3 class="post_title text"><%= post.title %></h3>
+<h3 name="post_title" class="post_title text"><%- post.title %></h3>
 <div class="post_message text">
-  <p><%= post.message %></p>
+  <p><%- post.message %></p>
 </div>
-<p class="post_date text">Posted <%= $.formatDateTime('MM dd, y  g:ii a', new Date(post.created_at)) %> by <%= post.username %></p>
+<p class="post_date text">Posted <%- $.formatDateTime('MM dd, y  g:ii a', new Date(post.updated_at)) %> by <%- post.username %></p>
 
 <% if (window.currentUser) { %>
   <% if (post.user_id === parseInt(window.currentUser.id)) { %>
     <ul class="buttons">
       <li>
-        <button><a href="/posts/<%= post.id %>/edit">Edit</a></button>
+        <button name="edit">Edit</button>
       </li>
       <li>
         <button name="delete">X</button>
