@@ -10,6 +10,7 @@ MessageBoard.Views.PostView = Backbone.View.extend({
     this.listenTo(this.model, 'all', this.render);
   },
   tagName: 'li',
+  className: 'post',
   template: JST['posts/index'],
   editTemplate: JST['posts/editPost'],
   render: function() {

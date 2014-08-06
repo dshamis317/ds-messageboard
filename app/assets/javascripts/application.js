@@ -20,4 +20,5 @@
 //= require_tree ./models
 //= require_tree ./collections
 //= require_tree ./views
+//= require jquery.formatDateTime
 //= require_tree .
