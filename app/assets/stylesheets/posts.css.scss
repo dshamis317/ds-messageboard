@@ -43,10 +43,11 @@ body {
     margin-top: 3px;
     width: 100%;
     background-color: lightgray;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 1px solid black;
     font-family: arial;
     display: inline-block;
+    padding-bottom: 5px;
 
     hr {
       width: 95%;
@@ -82,6 +83,7 @@ body {
       width: 100px;
       border-radius: 5px;
       border-style: none;
+      cursor: pointer;
     }
 
   }

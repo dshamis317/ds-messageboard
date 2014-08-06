@@ -19,12 +19,12 @@
         <br>
         <label class="text" for="post_title">Name:</label>
         <br>
-        <input class="form_title text" type="text" id="post_title" name="post[title]" value="<%= current_user.name %>" readonly>
+        <input class="form_title text" type="text" id="post_author" name="post[name]" value="<%= current_user.name %>" readonly>
       </div>
       <div class="post_message_div">
         <label class="text" for="post_message">Post:</label>
         <br>
-        <input class="form_message text" type="text" id="post_message" name="post[message]" placeholder="What's on your mind?">
+        <textarea class="form_message text" type="text" id="post_message" name="post[message]"></textarea>
         <input type="hidden" name="post[user_id]" value="<%= current_user.id %>">
         </div>
         <br>
