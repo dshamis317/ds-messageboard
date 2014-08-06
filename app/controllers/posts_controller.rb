@@ -32,8 +32,10 @@ class PostsController < ApplicationController
   def update
     post = Post.find(params[:id])
     post.update(post_params)
-    # redirect_to post_path(post)
-    redirect_to root_path
+    respond_to do |format|
+      format.html {redirect_to post_path(post)}
+      format.json {render :json => post.to_json}
+    end
   end
 
   def destroy
