@@ -2,6 +2,11 @@ class PostsController < ApplicationController
   def index
     @users = User.all
     @posts = Post.all
+    compiled = {users: @users, posts: @posts}
+    respond_to do |format|
+      format.json {render :json => compiled.to_json}
+      format.html
+    end
   end
 
   def show

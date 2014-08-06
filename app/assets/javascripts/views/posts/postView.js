@@ -5,7 +5,16 @@ var MessageBoard = MessageBoard || {
 };
 
 MessageBoard.Views.PostView = Backbone.View.extend({
-
-  template: JST['posts/index']
-
+  initialize: function() {
+    this.listenTo(this.model, 'destroy', this.remove);
+    this.listenTo(this.model, 'all', this.render);
+  },
+  tagName: 'li',
+  template: JST['posts/index'],
+  editTemplate: JST['posts/editPost'],
+  render: function() {
+    var renderedHTML = this.template({post: this.model.toJSON()});
+    this.$el.html(renderedHTML);
+    return this;
+  }
 });
