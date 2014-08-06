@@ -27,7 +27,7 @@ describe SessionsController do
   describe 'POST create session' do
 
     before :each do
-      post :create, {name: 'Dmitry', password: 'password'}
+      post :create, :user => {name: 'Dmitry', password: 'password'}
     end
 
     it 'responds with a redirect' do
