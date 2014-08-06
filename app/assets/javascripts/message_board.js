@@ -32,12 +32,19 @@ function visualInitializers() {
     e.preventDefault();
     if ($('.form').is(":hidden")) {
      $('.form').slideDown();
+     $('.post').slideUp();
      $(e.target).val('Hide');
    } else {
      $('.form').slideUp();
+     $('.post').slideDown();
      $(e.target).val('☑ New Post');
    }
  })
+
+  $('.title').on('click', function(e) {
+    e.preventDefault();
+    location.reload(true);
+  })
 }
 
 
