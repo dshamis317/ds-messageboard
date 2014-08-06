@@ -2,7 +2,7 @@
 <div class="post_message text">
   <p><%= post.message %></p>
 </div>
-<p class="post_date text">Posted <%= $.formatDateTime('MM dd, y  g:ii a', new Date(post.created_at)) %></p>
+<p class="post_date text">Posted <%= $.formatDateTime('MM dd, y  g:ii a', new Date(post.created_at)) %> by <%= post.username %></p>
 
 <% if (window.currentUser) { %>
   <% if (post.user_id === parseInt(window.currentUser.id)) { %>

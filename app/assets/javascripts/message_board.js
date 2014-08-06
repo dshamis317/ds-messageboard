@@ -12,6 +12,19 @@ MessageBoard.initialize = function() {
   });
 
   postCollection.fetch();
+
+  $('.form').on('submit', function(e) {
+    e.preventDefault();
+    console.log(this)
+    var titleField = $('.form_title');
+    var title = titleField.val();
+    var postField = $('.form_message');
+    var post = postField.val();
+    var userId = window.currentUser;
+    titleField.val('');
+    postField.val('')
+    postCollection.create({title: title, message: post, user_id: userId});
+  })
 }
 
 function visualInitializers() {
@@ -19,17 +32,14 @@ function visualInitializers() {
     e.preventDefault();
     if ($('.form').is(":hidden")) {
      $('.form').slideDown();
-     $(e.target).val('Hide')
+     $(e.target).val('Hide');
    } else {
      $('.form').slideUp();
-     $(e.target).val('☑ New Post')
+     $(e.target).val('☑ New Post');
    }
  })
 }
 
-function submitPost() {
-
-}
 
 $(document).ready(function(){
   $('.form').hide();
