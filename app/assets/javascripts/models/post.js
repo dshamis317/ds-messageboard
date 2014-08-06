@@ -5,4 +5,5 @@ var MessageBoard = MessageBoard || {
 };
 
 MessageBoard.Models.Post = Backbone.Model.extend({
+  idAttribute: 'id'
 });

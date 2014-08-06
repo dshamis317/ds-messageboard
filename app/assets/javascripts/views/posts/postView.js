@@ -17,5 +17,12 @@ MessageBoard.Views.PostView = Backbone.View.extend({
     var renderedHTML = this.template({post: this.model.toJSON()});
     this.$el.html(renderedHTML);
     return this;
+  },
+  events: {
+    'click [name="delete"]' : 'deletePost'
+  },
+  deletePost: function() {
+    this.model.destroy()
+    return this
   }
 });
