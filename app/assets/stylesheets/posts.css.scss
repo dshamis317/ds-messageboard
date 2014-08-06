@@ -21,7 +21,7 @@ body {
     border: 1px solid black;
     padding: 3px;
 
-    .new_post_button {
+    .main {
       background-color: gray;
       margin: 5px;
       border-radius: 5px;
@@ -31,7 +31,7 @@ body {
       border: 1px solid black;
     }
 
-    .new_post_button:hover {
+    .main:hover {
       background-color: black;
       color: white;
       cursor: pointer;

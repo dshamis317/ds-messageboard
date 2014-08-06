@@ -20,7 +20,7 @@ MessageBoard.initialize = function() {
     var title = titleField.val();
     var postField = $('.form_message');
     var post = postField.val();
-    var userId = window.currentUser;
+    var userId = parseInt(window.currentUser.id);
     titleField.val('');
     postField.val('')
     postCollection.create({title: title, message: post, user_id: userId});
