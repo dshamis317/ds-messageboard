@@ -19,8 +19,10 @@ class PostsController < ApplicationController
 
   def create
     new_post = Post.create(post_params)
-    # redirect_to post_path(new_post)
-    redirect_to root_path
+    respond_to do |format|
+      format.html {redirect_to post_path(new_post)}
+      format.json {render :json => new_post.to_json}
+    end
   end
 
   def edit
@@ -36,7 +38,10 @@ class PostsController < ApplicationController
 
   def destroy
     Post.delete(params[:id])
-    redirect_to posts_path
+    respond_to do |format|
+      format.html {redirect_to posts_path}
+      format.json {render :json => {}.to_json}
+    end
   end
 
   private
