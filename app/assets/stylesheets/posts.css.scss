@@ -152,13 +152,16 @@ body {
   height: 200px;
   background-color: lightgray;
   margin: 0 auto;
+  margin-top: 80px;
   font-family: arial;
+  border: 1px solid black;
 
   h2 {
     width: 100%;
     background-color: dimgray;
     padding: 5px 0 5px 0;
     text-align: center;
+    margin: 0 0 10px 0;
   }
 
   .form_label {
