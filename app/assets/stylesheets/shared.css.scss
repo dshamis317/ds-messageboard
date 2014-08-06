@@ -2,10 +2,16 @@
   width: 100%;
   font-family: arial;
   display: inline-block;
+  background-color: dimgray;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-bottom: 1px solid black;
 
   h1 {
     width: 300px;
     float: left;
+    margin-left: 50px;
   }
 
   ul {
